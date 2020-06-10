@@ -1,0 +1,47 @@
+This challenge will help you learn the concept of recursion.
+
+A function that calls itself is known as a recursive function. 
+The C programming language supports recursion. But while using recursion, 
+one needs to be careful to define an exit condition from the function, otherwise it will go into an infinite loop.
+
+To prevent infinite recursion, if else statement (or similar approach) can be used where one branch makes the recursive call and other doesn't.
+
+code :
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+int find_nth_term(int n, int a, int b, int c) {
+  //Write your code here.
+  int n1,n2,n3,sum,i;
+  for(i=0;i<3;i++){
+      n=n-1;
+      if(n=c){
+       sum=sum+c;
+      }else if(n=b){
+          sum=sum+b;
+      }else if(n=a){
+          sum=sum+a;
+      }else{
+          sum=n;
+      }
+      
+        
+      }
+
+  return sum;
+}
+
+int main() {
+    int n, a, b, c;
+  
+    scanf("%d %d %d %d", &n, &a, &b, &c);
+    int ans = find_nth_term(n, a, b, c);
+ 
+    printf("%d", ans); 
+    return 0;
+}
+
