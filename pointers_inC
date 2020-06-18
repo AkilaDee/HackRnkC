@@ -1,0 +1,34 @@
+In this challenge, you will learn to implement the basic functionalities of pointers in C.
+A pointer in C is a way to share a memory address among different contexts (primarily functions). 
+They are primarily used whenever a function needs to modify the content of a variable, of which it doesn't have ownership.
+
+In order to access the memory address of a variable, val , we need to prepend it with & sign.
+E.g., &val returns the memory address of val .
+
+code :
+
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    // Complete this function 
+    int sum,sub;
+    sum=*a+*b;
+    sub=*a-*b;
+    sub=abs(sub);
+    *a=sum;
+    *b=sub;
+    return *a;
+    return *b;
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
+
